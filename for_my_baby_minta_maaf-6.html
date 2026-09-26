@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby 💌</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    font-family:Arial,sans-serif; background:linear-gradient(135deg,#ffe4ec,#fff7f9);
+    color:#6b3d4d; overflow:hidden;
+  }
+  .hearts span{position:fixed; bottom:-30px; animation:float 7s linear infinite; opacity:.65}
+  .hearts span:nth-child(1){left:8%;font-size:24px;animation-delay:0s}
+  .hearts span:nth-child(2){left:25%;font-size:18px;animation-delay:2s}
+  .hearts span:nth-child(3){left:52%;font-size:27px;animation-delay:1s}
+  .hearts span:nth-child(4){left:76%;font-size:20px;animation-delay:3s}
+  .hearts span:nth-child(5){left:91%;font-size:25px;animation-delay:4s}
+  @keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+  .card{
+    width:min(92%,560px); max-height:88vh; overflow:auto; background:rgba(255,255,255,.9);
+    border-radius:28px; padding:30px 25px; text-align:center;
+    box-shadow:0 15px 45px rgba(150,70,95,.18); position:relative;
+  }
+  .cover h1{font-size:34px;margin:10px 0;color:#c65376}
+  .cover p{line-height:1.7}
+  button{
+    border:0; border-radius:999px; padding:14px 28px; background:#e86f92;
+    color:white; font-size:16px; font-weight:bold; cursor:pointer;
+    box-shadow:0 7px 18px rgba(232,111,146,.3);
+  }
+  button:hover{transform:scale(1.03)}
+  .letter{display:none;text-align:left;animation:appear .7s ease}
+  @keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+  .letter h2{text-align:center;color:#c65376;margin-top:0}
+  .letter p{font-size:16px;line-height:1.8;margin:13px 0}
+  .sign{text-align:center;margin-top:22px;font-weight:bold;color:#c65376}
+  .small{text-align:center;font-size:13px;color:#a87886;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="hearts"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span></div>
+
+<div class="card">
+  <section class="cover" id="cover">
+    <div style="font-size:58px">💌</div>
+    <h1>For My Baby</h1>
+    <p>Sayang ada sesuatu yang sayang mau cakap dekat baby...</p>
+    <button onclick="openLetter()">Open surat ni 🥺❤️</button>
+    <div class="small">tekan kalau baby sudah readyy</div>
+  </section>
+
+  <section class="letter" id="letter">
+    <h2>Untuk Baby Sayang ❤️</h2>
+    <p>Haii babyy 🥺❤️</p>
+    <p>Sayang tulis ayat ni sebab sayang betul-betul mau minta maaf atas kesalahan sayang dekat baby 🙁 Sayang tahu sayang tidak patut buat macam tu semalam. Sayang minta maaf sangat-sangat babyy.</p>
+    <p>Sayang tidak marah baby tau, dan sayang tidak pernah pun berniat mau larang baby atau buat baby rasa macam sayang marah. Sayang cuma tidak mau baby fikir bukan-bukan pasal sayang 🥺 Sayang minta maaf sebab sudah buat baby teda mood semalam.</p>
+    <p>Sayang tidak mau kita tidak okay macam ni hm. Sayang mau kita happy-happy, baik-baik dan bahagia sama-sama jaa ❤️</p>
+    <p>Sayang sayang baby sangat-sangat. Sayang tidak mau kehilangan baby dan sayang tidak mau buat baby terasa, apalagi sampai buat baby sakit hati dengan sayang 😔</p>
+    <p>Sayang tahu mungkin perkataan “maaf” saja tidak cukup untuk pulihkan perasaan baby, tapi sayang harap baby tahu yang sayang betul-betul menyesal. Sayang harap baby tidak lagi fikir bukan-bukan pasal sayang sebab sayang sumpah, sayang tidak marah baby semalam.</p>
+    <p>Sayang minta maaf sangat-sangat, babyy. Sayang akan cuba untuk jadi lebih baik lepas ni. Sayang tidak mau baby rasa benda-benda macam ni lagi. Sayang tidak pernah sikit pun berniat mau marah baby atau sakitkan hati baby.</p>
+    <p class="sign">Sorryy babyy 🥺❤️<br>Sayang sayang baby sangat-sangat.<br>Jangan sedih lama-lama tauu 🫶🏻</p>
+  </section>
+</div>
+
+<script>
+function openLetter(){
+  document.getElementById('cover').style.display='none';
+  document.getElementById('letter').style.display='block';
+}
+</script>
+</body>
+</html>
